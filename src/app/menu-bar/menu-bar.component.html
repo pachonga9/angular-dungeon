@@ -1,0 +1,17 @@
+<div class="menu-bar">
+  <p>
+    menu-bar. Later, these button options wont appear show up until they are
+    needed.
+  </p>
+  <div class="buttons-div">
+    <ng-container *ngFor="let map of buttonMap">
+      <button *ngIf="map.display" (click)="map.button.click()">
+        {{ map.button.label }}
+      </button>
+    </ng-container>
+  </div>
+</div>
+
+<!-- possibly create different component for each button OR maybe I wont need to
+though and can handle logic in this component's class -->
+<!-- ngFor button of buttons? -->
