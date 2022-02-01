@@ -5,7 +5,12 @@
   </p>
   <div class="buttons-div">
     <ng-container *ngFor="let map of buttonMap">
-      <button *ngIf="map.display" (click)="map.button.click()">
+      <button
+        mat-raised-button
+        color="accent"
+        *ngIf="map.display"
+        (click)="map.button.click()"
+      >
         {{ map.button.label }}
       </button>
     </ng-container>

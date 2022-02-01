@@ -7,6 +7,9 @@ import { OutputZoneComponent } from './output-zone/output-zone.component';
 import { InventoryMenuComponent } from './inventory-menu/inventory-menu.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MainMenuComponent } from './main-menu/main-menu.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -14,13 +17,15 @@ import { MainMenuComponent } from './main-menu/main-menu.component';
     MenuBarComponent,
     OutputZoneComponent,
     InventoryMenuComponent,
-    MainMenuComponent
+    MainMenuComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
